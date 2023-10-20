@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black text-white;
+  @apply scroll-smooth;
+}
+
+img {
+  filter: invert(1);
+  @apply mx-auto;
+}
+
+.nav-link {
+  @apply underline px-2 py-1;
+}

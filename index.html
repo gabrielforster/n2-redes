@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redes de Computadores</title>
+    <script defer type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <header class="p-4 mx-auto w-11/12  flex justify-between">
+      <h1 class="text-3xl">PEG</h1> 
+
+      <nav>
+        <ul class="flex">
+          <li><a class="nav-link" href="#tcp">TCP/IP</a></li>
+          <li><a class="nav-link" href="#osi">OSI</a></li>
+          <li><a class="nav-link" href="#topologias">Topologias</a></li>
+          <li><a class="nav-link" href="#protocolos">Protocolos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="tcp">
+      <h1>Modelo TCP/IP</h1>
+    </div>
+
+    <div id="osi">
+      <h1>Modelo OSI</h1>
+    </div>
+
+    <div id="topologias" class="flex flex-col items-center">
+      <h1 class="text-4xl">Topologias</h1>
+
+      <section class="container">
+        <div id="anel">
+          <div class="image">
+            <img src="/img/anel.png" alt="Topologia de anel" /> 
+          </div>
+
+          <div class="content">
+            <h1>Anel</h1>
+            <p>
+              Na topologia de anel, a organização é feita em formato circular. Assim, cada máquina possui outras duas máquinas vizinhas conectadas e pelas quais os dados são transmitidos.
+            </p>
+            <p>
+              Outra característica desse tipo de topologia é que o fluxo de transmissão dos dados é unidirecional. Ou seja, ele é retransmitido de estação em estação, em uma direção única, até que chegue ao seu destino.
+            </p>
+
+            <p>Algumas das vantagens</p>
+            <ul class="list-disc">
+              <li>Baixo custo de implementação</li>
+              <li>Eficiência na transmissão de dados</li>
+              <li>Alta confiabilidade</li>
+              <li>Possibilidade de implementação em grandes redes</li>
+            </ul>
+
+            <p>
+              Por outro lado, uma desvantagem é que, considerando a forma como os dados são transmitidos, a falha de uma das máquinas pode afetar a estabilidade da rede por inteiro.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="protocolos">
+      <h1>Protocoloes</h1>
+    </div>
+  </body>
+</html>
