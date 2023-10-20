@@ -3,15 +3,34 @@
 @tailwind utilities;
 
 body {
-  @apply bg-black text-white;
   @apply scroll-smooth;
 }
 
+
 img {
-  filter: invert(1);
   @apply mx-auto;
+}
+
+.black-white {
+  @apply bg-black text-white;
+}
+
+.white-black{
+  @apply bg-white text-black;
 }
 
 .nav-link {
   @apply underline px-2 py-1;
+}
+
+.topologias-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+.container {
+  @apply flex flex-col;
+}
+
+.container > * {
+  @apply flex-1;
 }
