@@ -156,7 +156,7 @@
 
         <section id="ponto-a-ponto" class="container">
           <div class="image">
-            <img src="/img/ponto-a-ponto.png" alt="Topologia ponto a ponto" />
+            <img src="/img/pontoaponto.png" alt="Topologia ponto a ponto" />
           </div>
 
           <div class="content">
@@ -172,8 +172,199 @@
       </section>
     </div>
 
-    <div id="protocolos">
-      <h1>Protocoloes</h1>
+
+    <div id="protocolos" class="black-white flex flex-col items-center">
+      <h1 class="text-4xl">Protocolos</h1>
+
+      <section id="ip" class="protocol">
+        <h1>IP</h1>
+
+        <div class="content">
+          <p>
+            O protocolo IP, do termo em inglês Internet Protocol (Protocolo de Internet) faz parte da camada de internet e é um dos protocolos mais importantes da web. Ele permite a elaboração e transporte dos pacotes de dados, porém sem assegurar a sua entrega.
+          </p>
+
+          <p>
+            O destinatário da mensagem é determinado por meio dos campos de endereço IP (endereço do computador), máscara de sub rede (determina parte do endereço que se refere à rede) e o campo gateway estreita por padrão (permite saber qual o computador de destino, caso não esteja localizado na rede local).
+          </p>
+        </div>
+      </section>
+
+      <section id="tcpip" class="protocol">
+        <h1>TCP/IP</h1>
+        
+        <div class="content">
+          <p>
+            Trata-se do acrônimo de dois protocolos combinados. São eles o TCP (Transmission Control Protocol — Protocolo de Controle de Transmissão) e IP (Internet Protocol — Protocolo de Internet).
+          </p>
+
+          <p>
+            Juntos, são os responsáveis pela base de envio e recebimento de dados por toda a internet. Essa pilha de protocolos é dividida em 4 camadas:
+          </p>
+
+          <ul class="list-disc">
+            <li>
+              aplicação: usada para enviar e receber dados de outros programas pela internet. Nessa camada estão os protocolos HTTP, FTP e SMTP;
+            </li> 
+
+            <li>
+              transporte: responsável por transportar os arquivos dos pacotes recebidos da camada de aplicação. Eles são organizados e transformados em outros menores, que serão enviados à rede;
+            </li>
+
+            <li>
+              rede: os arquivos empacotados na camada de transporte são recebidos e anexados ao IP da máquina que envia e recebe os dados. Em seguida, eles são enviados pela internet;
+            </li>
+
+            <li>
+              interface: é a camada que executa o recebimento ou o envio de arquivos na web.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section id="http" class="protocol">
+        <h1>HTTP/HTTPS</h1>
+        
+        <div class="content">
+          <p>
+            O protocolo HTTP (Hypertext Transfer Protocol — Protocolo de Transferência de Hipertexto) é usado para navegação em sites da internet. Funciona como uma conexão entre o cliente (browser) e o servidor (site ou domínio).
+          </p>
+            
+          <p>
+            O navegador envia um pedido de acesso a uma página, e o servidor retorna uma resposta de permissão de acesso. Junto com ela são enviados também os arquivos da página que o usuário deseja acessar.
+          </p>
+
+          <p>
+            Já o HTTPS (Hyper Text Transfer Secure — Protocolo de Transferência de Hipertexto Seguro) funciona exatamente como o HTTP, porém, existe uma camada de proteção a mais. Isso significa que os sites que utilizam esse protocolo são de acesso seguro.
+          </p>
+
+          <p>
+            O protocolo HTTPS é comumente usado por sites com sistemas de pagamentos. Esse tipo de site depende de proteção que garanta a integridade dos dados, informações de conta e cartão de créditos dos usuários. A segurança é feita por meio de uma certificação digital, que cria uma criptografia para impedir ameaças e ataques virtuais.
+          </p>
+        </div>
+      </section>
+
+      <section id="ftp" class="protocol">
+        <h1>FTP</h1>
+
+        <div class="content">
+          <p>
+            Significa Protocolo de Transferência de Arquivos (do inglês File Transfer Protocol). É a forma mais simples para transferir dados entre dois computadores utilizando a rede.
+          </p>
+
+          <p>
+            O protocolo FTP funciona com dois tipos de conexão: a do cliente (computador que faz o pedido de conexão) e do servidor (computador que recebe o pedido de conexão e fornece o arquivo ou documento solicitado pelo cliente).
+          </p>
+
+          <p>
+            O FTP é útil caso o usuário perca o acesso ao painel de controle do seu site. Assim sendo,essa ferramenta pode ser usada para realizar ajustes página, adicionar ou excluir arquivos, ou ainda solucionar qualquer outra questão no site.
+          </p>
+        </div>
+      </section>
+
+      <section id="sftp" class="protocol">
+        <h1>SFTP</h1>
+        
+        <div class="content">
+          <p>
+            Simple Transfer Protocol (Protocolo de Transferência Simples de Arquivos) consiste no protocolo FTP acrescido de uma camada de proteção para arquivos transferidos.
+
+          </p>
+
+          <p>
+            Nele, a troca de informações é feita por meio de pacotes com a tecnologia SSH (Secure Shell – Bloqueio de Segurança), que autenticam e protegem a conexão entre cliente e servidor. O usuário define quantos arquivos serão transmitidos simultaneamente e define um sistema de senhas para reforçar a segurança.
+          </p>
+        </div>
+      </section>
+
+      <section id="ssh" class="protocol">
+        <h1>SSH</h1>
+        
+        <div class="content">
+          <p>
+            SSH (Secure Shell, já citado acima) é um dos protocolos específicos de segurança de troca de arquivos entre cliente e servidor. Funciona a partir de uma chave pública. Ela verifica e autentica se o servidor que o cliente deseja acessar é realmente legítimo.
+          </p>
+
+          <p>
+            O usuário define um sistema de proteção para o site sem comprometer o seu desempenho. Ele fortifica a segurança do projeto e garante maior confiança e estabilidade na transferência de arquivos. 
+          </p>
+        </div>
+      </section>
+
+      <section id="ssl" class="protocol">
+        <h1>SSL</h1>
+        
+        <div class="content">
+          <p>
+            O protocolo SSL (Secure Sockets Layer — Camada de Portas de Segurança) permite a comunicação segura entre os lados cliente e servidor de uma aplicação web, por meio de uma confirmação da identidade de um servidor e a verificação do seu nível de confiança.
+          </p>
+
+          <p>
+            Ele age como uma subcamada nos protocolos de comunicação na internet (TCP/IP). Funciona com a autenticação das partes envolvidas na troca de informações.
+          </p>
+          
+          <p>
+            A conexão SSL é sempre iniciada pelo cliente, que solicita conexão com um site seguro. O browser, então, solicita o envio do Certificado Digital e verifica se ele é confiável, válido, e se está relacionado ao site que fez o envio. Após a confirmação das informações, a chave pública é enviada e as mensagens podem ser trocadas.
+          </p>
+        </div>
+      </section>
+
+      <section id="icpm" class="protocol">
+        <h1>ICPM</h1>
+        
+        <div class="content">
+          <p>
+            Sigla para Internet Control Message Protocol (Protocolo de Mensagens de Controle da Internet). Esse protocolo autoriza a criação de mensagens relativas ao IP, mensagens de erro e pacotes de teste.
+          </p>
+
+          <p>
+            Ele permite gerenciar as informações relativas a erros nas máquinas conectadas. O protocolo IP não corrige esses erros, mas os mostra para os protocolos das camadas vizinhas. Por isso, o protocolo ICMP é usado pelos roteadores para assinalar um erro, chamado de Delivery Problem (Problema de Entrega).
+          </p>
+        </div>
+      </section>
+
+      <section id="smtp" class="protocol">
+        <h1>SMTP</h1>
+        
+        <div class="content">
+          <p>
+            Protocolo para transferência de e-mail simples (Simple Mail Transfer Protocol) é comumente utilizado para transferir e-mails de um servidor para outro, em conexão ponto a ponto.
+          </p>
+
+          <p>
+            As mensagens são capturadas e enviadas ao protocolo SMTP, que as encaminha aos destinatários finais em um processo automatizado e quase instantâneo. O usuário não tem autorização para realizar o download das mensagens no servidor.
+          </p>
+        </div>
+      </section>
+
+      <section id="telnet" class="protocol">
+        <h1>TELNET</h1>
+        
+        <div class="content">
+          <p>
+            Protocolo de acesso remoto. É um protocolo padrão da Internet que permite obter uma interface de terminais e aplicações pela web. Fornece regras básicas para ligar um cliente a um intérprete de comando.
+          </p>
+
+          <p>
+            Ele tem como base uma conexão TCP para enviar dados em formato ASCII codificados em 8 bits, entre os quais se intercalam sequências de controle Telnet. Assim, fornece um sistema orientado para a comunicação bidirecional e fácil de aplicar.
+          </p>
+        </div>
+      </section>
+
+      <section id="pop3" class="protocol">
+        <h1>POP3</h1>
+        
+        <div class="content">
+          <p>
+            Acrônimo para Post Office Protocol 3 (Protocolo de Correios 3). É um protocolo utilizado para troca de mensagens eletrônicas. Funciona da seguinte forma: um servidor de email recebe e armazena mensagens. O cliente se autentica ao servidor da caixa postal para poder acessar e ler as mensagens.
+          </p>
+
+          <p>
+            Assim, as mensagens armazenadas no servidor são transferidas em sequência para o computador do cliente. Quando a conexão é encerrada as mensagens ainda são acessadas no modo offline.
+          </p>
+        </div>
+      </section>
     </div>
   </body>
 </html>

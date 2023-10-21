@@ -34,3 +34,19 @@ img {
 .container > * {
   @apply flex-1;
 }
+
+#protocolos .protocol {
+  @apply flex flex-col my-8 px-8;
+  @apply max-w-2xl;
+}
+
+#protocolos .protocol:nth-child(odd) {
+  @apply items-start text-left;
+  @apply rounded-2xl rounded-tl-none border;
+}
+
+#protocolos .protocol:nth-child(even) {
+  @apply items-end text-right;
+  @apply rounded-2xl rounded-tr-none border;
+}
+
