@@ -22,6 +22,10 @@ p {
   @apply text-justify; 
 }
 
+ul li {
+  @apply mt-2;
+}
+
 img {
   @apply mx-auto;
 }
