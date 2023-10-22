@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply sm:text-xl
+}
+
+p {
+  @apply antialiased;
+  @apply subpixel-antialiased;
+  @apply tracking-tight;
+  @apply leading-5;
+  @apply pb-4;
+  @apply text-justify; 
+}
+
+ul li {
+  @apply mt-2;
+}
+
+img {
+  @apply mx-auto;
+}
+
+.black-white {
+  @apply bg-black text-white;
+}
+
+.white-black{
+  @apply bg-white text-black;
+}
+
+.nav-link {
+  @apply underline px-2 py-1;
+}
+
+.model {
+  @apply mx-2 sm:mx-auto;
+  @apply sm:max-w-[80%] sm:mx-auto;
+}
+
+.model h1 {
+  @apply pt-8 pb-4 font-bold text-center text-xl sm:text-2xl;
+}
+
+.model .content {
+  @apply flex flex-col items-center justify-around;
+  @apply sm:flex-row;
+}
+
+.model .text {
+  @apply sm:w-1/2;
+}
+
+.model .content .image-container {
+  @apply sm:w-1/2 sm:h-1/2;
+}
+
+.model .content .image-container .image {
+  @apply sm:w-4/5 my-4 sm:mx-auto;
+  @apply filter invert;
+}
+
+#osi .content {
+  @apply  sm:flex-row-reverse;
+}
+
+#comparativo .image{
+  @apply filter invert;
+}
+
+#topologias {
+  @apply flex flex-col items-center justify-around max-w-4xl mx-auto;
+}
+
+#topologias .container {
+  @apply rounded border m-2;
+}
+
+#topologias .container .image img {
+  @apply h-48;
+}
+
+#topologias .container .content {
+  @apply p-8 pb-2;
+}
+
+
+#topologias .container .content h1 {
+  @apply font-bold text-xl;
+}
+
+.container > * {
+  @apply flex-1;
+}
+
+#protocolos .protocol {
+  @apply flex flex-col my-8 px-8 py-4 sm:py-6 sm:px-8;
+  @apply max-w-2xl mx-2;
+}
+
+#protocolos .protocol h1 {
+  @apply font-bold text-xl sm:text-2xl;
+}
+
+#protocolos .protocol:nth-child(even) {
+  @apply items-start text-left;
+  @apply rounded-3xl rounded-tl-none border;
+}
+
+#protocolos .protocol:nth-child(odd) {
+  @apply items-end text-right;
+  @apply rounded-3xl rounded-tr-none border;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.disappear-header {
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+}
