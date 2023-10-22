@@ -8,7 +8,7 @@
     <script defer type="module" src="/src/main.ts"></script>
   </head>
   <body>
-    <header class="black-white p-5 mx-auto w-full flex justify-between flex-col sm:flex-row">
+    <header class="black-white p-5 mx-auto w-full flex justify-between flex-col sm:flex-row sticky top-0 z-50">
       <h1 class="text-3xl text-center">PEG</h1> 
 
       <nav class="mx-auto sm:mx-0">
@@ -21,160 +21,251 @@
       </nav>
     </header>
 
-    <div id="tcp" class="black-white">
-      <h1>Modelo TCP/IP</h1>
-    </div>
+    <section class="black-white">
+      <div id="tcp" class="model">
+        <h1>Modelo TCP/IP</h1>
 
-    <div id="osi" class="black-white">
-      <h1>Modelo OSI</h1>
-    </div>
+        <div class="content">
+          <div class="image-container">
+            <img class="image" src="/img/tcpexample.svg" alt="Exemplo modelo TCP/IP">
+          </div>
+
+          <div class="text">
+            <p>
+              O TCP/IP, sigla para Transmission Control Protocol/Internet Protocol, é o conjunto de protocolos que sustenta a Internet e redes de computadores em todo o mundo. Ele é composto por quatro camadas interconectadas, oferecendo uma base para a comunicação eficaz entre dispositivos em uma rede.
+            </p>
+
+            <h2 class="pt-4 pb-2 text-lg font-bold">Camadas</h2>
+
+            <ul class="list-disc pb-5">
+              <li>
+                Interface de Rede, ou Link: Esta camada corresponde às camadas física e de enlace do Modelo OSI. Ela trata da transmissão física de dados na rede e lida com a conectividade local, incluindo protocolos de acesso à rede e endereçamento de hardware.
+              </li>
+
+              <li>
+                Internet: Esta camada equivale à camada de rede no Modelo OSI. Ela é responsável pelo roteamento de pacotes de dados e pelo endereçamento lógico, garantindo que os dados alcancem seu destino na rede global.
+              </li>
+
+              <li>
+                Transporte: Essa camada é equivalente à camada de transporte no Modelo OSI. O TCP (Transmission Control Protocol) e o UDP (User Datagram Protocol) são os principais protocolos aqui. O TCP fornece comunicação confiável, enquanto o UDP oferece transferência de dados mais rápida e menos confiável.
+              </li>
+
+              <li>
+                Aplicação: Corresponde à camada de aplicação do Modelo OSI e é a camada mais próxima do usuário. Ela inclui uma ampla variedade de protocolos, como HTTP, FTP, SMTP e muitos outros, que permitem a comunicação e o compartilhamento de informações entre aplicativos e serviços.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="black-white">
+      <div id="osi" class="model">
+        <h1>Modelo OSI</h1>
+
+        <div class="content">
+          <div class="image-container">
+            <img class="image" src="/img/osiexample.png" alt="Examplo modelo OSI">
+          </div>
+
+          <div class="text">
+            <p>
+              O Modelo OSI, que significa Open Systems Interconnection, é um modelo de arquitetura de rede que divide o processo de comunicação em sete camadas. Cada camada executa um papel na transmissão dos pacotes de dados, garantindo que dispositivos e sistemas, diferentes, realizem uma comunicação.
+            </p>
+
+            <h2 class="pt-4 pb-2 text-lg font-bold">Camadas</h2>
+
+            <ul class="list-disc p-5">
+              <li>
+                Física: Lida com a transmissão física de bits na rede, incluindo meio de transmissão, cabos, conectores e sinais elétricos ou ópticos.
+              </li>
+
+              <li>
+                Enlace de Dados: Responsável pela detecção e correção de erros, além de controlar o acesso ao meio físico. Aqui, os dados são organizados em quadros.
+              </li>
+
+              <li>
+                Rede: Foca na roteamento de pacotes de dados, determinando o melhor caminho para a entrega, por meio de endereçamento lógico.
+              </li>
+
+              <li>
+                Transporte: Garante a entrega de dados de forma confiável, estabelecendo conexões, segmentando e reagrupando pacotes, e lidando com o controle de fluxo.
+              </li>
+
+              <li>
+                Sessão: Gerencia a comunicação entre as aplicações, estabelecendo, mantendo e encerrando sessões.
+              </li>
+
+              <li>
+                Apresentação: Realiza a tradução, criptografia e compressão dos dados, garantindo que as informações sejam compreensíveis e seguras.
+              </li>
+
+              <li>
+                Aplicação: É a camada mais próxima do usuário, onde aplicativos e serviços de rede interagem diretamente, como navegadores da web, clientes de email e outros programas.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="black-white">
+      <div id="comparativo" class="model py-4">
+        <h1>Comparativo das camadas</h1>
+
+        <img class="image" src="/img/comparativo.jpg" alt="Comparativo entre os modelos" />
+      </div>
+    </section>
 
     <div id="topologias" class="white-black flex flex-col items-center">
-      <h1 class="text-4xl">Topologias</h1>
+      <h1 class="text-4xl py-8">Topologias</h1>
 
-      <section class="topologias-grid">
-        <section id="anel" class="container">
-          <div class="image">
-            <img src="/img/anel.png" alt="Topologia de anel" /> 
-          </div>
+      <section id="anel" class="container">
+        <div class="image">
+          <img src="/img/anel.png" alt="Topologia de anel" /> 
+        </div>
 
-          <div class="content">
-            <h1>Anel</h1>
-            <p>
-              Na topologia de anel, a organização é feita em formato circular. Assim, cada máquina possui outras duas máquinas vizinhas conectadas e pelas quais os dados são transmitidos.
-            </p>
-            <p>
-              Outra característica desse tipo de topologia é que o fluxo de transmissão dos dados é unidirecional. Ou seja, ele é retransmitido de estação em estação, em uma direção única, até que chegue ao seu destino.
-            </p>
+        <div class="content">
+          <h1>Anel</h1>
+          <p>
+            Na topologia de anel, a organização é feita em formato circular. Assim, cada máquina possui outras duas máquinas vizinhas conectadas e pelas quais os dados são transmitidos.
+          </p>
+          <p>
+            Outra característica desse tipo de topologia é que o fluxo de transmissão dos dados é unidirecional. Ou seja, ele é retransmitido de estação em estação, em uma direção única, até que chegue ao seu destino.
+          </p>
 
-            <p>Algumas das vantagens</p>
-            <ul class="list-disc">
-              <li>Baixo custo de implementação</li>
-              <li>Eficiência na transmissão de dados</li>
-              <li>Alta confiabilidade</li>
-              <li>Possibilidade de implementação em grandes redes</li>
-            </ul>
+          <p>Algumas das vantagens</p>
+          <ul class="list-disc">
+            <li>Baixo custo de implementação</li>
+            <li>Eficiência na transmissão de dados</li>
+            <li>Alta confiabilidade</li>
+            <li>Possibilidade de implementação em grandes redes</li>
+          </ul>
 
-            <p>
-              Por outro lado, uma desvantagem é que, considerando a forma como os dados são transmitidos, a falha de uma das máquinas pode afetar a estabilidade da rede por inteiro.
-            </p>
-          </div>
-        </section>
+          <p>
+            Por outro lado, uma desvantagem é que, considerando a forma como os dados são transmitidos, a falha de uma das máquinas pode afetar a estabilidade da rede por inteiro.
+          </p>
+        </div>
+      </section>
 
-        <section id="arvore" class="container">
-          <div class="image">
-            <img src="/img/arvore.png" alt="Topologia em árvore" />
-          </div>
+      <section id="arvore" class="container">
+        <div class="image">
+          <img src="/img/arvore.png" alt="Topologia em árvore" />
+        </div>
 
-          <div class="content">
-            <h1>Árvore</h1>
-            <p>
-              A disposição das máquinas nessa topologia lembra a dos galhos de uma árvore. Assim, ela tem um node central (como um tronco), que é responsável pela distribuição dos dados.
-            </p>
+        <div class="content">
+          <h1>Árvore</h1>
+          <p>
+            A disposição das máquinas nessa topologia lembra a dos galhos de uma árvore. Assim, ela tem um node central (como um tronco), que é responsável pela distribuição dos dados.
+          </p>
 
-            <p>
-              A vantagem da topologia de árvore sobre a de anel é que no caso de falha de um dos dispositivos da ramificação, a rede não fica comprometida. Além disso, essa organização também facilita a identificação de erros.
-            </p>
+          <p>
+            A vantagem da topologia de árvore sobre a de anel é que no caso de falha de um dos dispositivos da ramificação, a rede não fica comprometida. Além disso, essa organização também facilita a identificação de erros.
+          </p>
 
-            <p>
-              Ainda assim, embora a vulnerabilidade não seja tão alta, caso o dispositivo central seja afetado, os demais também sofrem o impacto. Outra desvantagem é a do cabeamento, já que essa estrutura demanda uma grande quantidade do material.
-            </p>
-          </div>
-        </section>
+          <p>
+            Ainda assim, embora a vulnerabilidade não seja tão alta, caso o dispositivo central seja afetado, os demais também sofrem o impacto. Outra desvantagem é a do cabeamento, já que essa estrutura demanda uma grande quantidade do material.
+          </p>
+        </div>
+      </section>
 
-        <section id="barramento" class="container">
-          <div class="image">
-            <img src="/img/barramento.png" alt="Topologia em barramento" />
-          </div>
+      <section id="barramento" class="container">
+        <div class="image">
+          <img src="/img/barramento.png" alt="Topologia em barramento" />
+        </div>
 
-          <div class="content">
-            <p>
-              Mesmo o nome não dê indícios de como sua estrutura é visualmente, a topologia de barramento é uma das mais simples de ser implementada. Neste formato, os dados circulam unilateralmente por meio de um único cabo.
-            </p>
+        <div class="content">
+          <h1>Barramento</h1>
+          <p>
+            Mesmo o nome não dê indícios de como sua estrutura é visualmente, a topologia de barramento é uma das mais simples de ser implementada. Neste formato, os dados circulam unilateralmente por meio de um único cabo.
+          </p>
 
-            <p>
-              Embora tenha um layout simples e econômico, de fácil manutenção, o que é uma grande vantagem, essa estrutura é vulnerável a falhas. Afinal, assim como no caso da topologia de anel, as máquinas estão conectadas em um único fluxo.
-            </p>
-          </div>
-        </section>
+          <p>
+            Embora tenha um layout simples e econômico, de fácil manutenção, o que é uma grande vantagem, essa estrutura é vulnerável a falhas. Afinal, assim como no caso da topologia de anel, as máquinas estão conectadas em um único fluxo.
+          </p>
+        </div>
+      </section>
 
-        <section id="estrela" class="container">
-          <div class="image">
-            <img src="/img/estrela.png" alt="Topologia em estrela" />
-          </div>
+      <section id="estrela" class="container">
+        <div class="image">
+          <img src="/img/estrela.png" alt="Topologia em estrela" />
+        </div>
 
-          <div class="content">
-            <p>
-              Na topologia de formato estrela, um único dispositivo — que é organizado centralmente —, concentra os dados e os distribui para os demais dispositivos nas estações.
-            </p>
+        <div class="content">
+          <h1>Estrela</h1>
+          <p>
+            Na topologia de formato estrela, um único dispositivo — que é organizado centralmente —, concentra os dados e os distribui para os demais dispositivos nas estações.
+          </p>
 
-            <p>
-              Essa é uma das topologias mais usadas e sua vantagem é a facilidade de gerenciamento. Isso porque, caso um dos dispositivos apresente problemas, ele fica fora da rede sem comprometer os demais.
-            </p>
+          <p>
+            Essa é uma das topologias mais usadas e sua vantagem é a facilidade de gerenciamento. Isso porque, caso um dos dispositivos apresente problemas, ele fica fora da rede sem comprometer os demais.
+          </p>
 
-            <p>
-              Ainda assim, assim como na topologia de árvore, o comprometimento do dispositivo central faz com que a rede seja impactada por completo.
-            </p>
-          </div>
-        </section>
+          <p>
+            Ainda assim, assim como na topologia de árvore, o comprometimento do dispositivo central faz com que a rede seja impactada por completo.
+          </p>
+        </div>
+      </section>
 
-        <section id="hibrida" class="container">
-          <div clas="image">
-            <img src="/img/hibrida.png" alt="Topologia híbrida" />
-          </div>
+      <section id="hibrida" class="container">
+        <div class="image">
+          <img src="/img/hibrida.png" alt="Topologia híbrida" />
+        </div>
 
-          <div class="content">
-            <p>
-              O nome já indica: a topologia de rede híbrida combina mais de um tipo de topologia em sua organização. É por conta dessa versatilidade que hoje é o formato mais utilizado pelo mercado, conseguindo suportar o crescimento das operações.
-            </p>
+        <div class="content">
+          <h1>Híbrida</h1>
+          <p>
+            O nome já indica: a topologia de rede híbrida combina mais de um tipo de topologia em sua organização. É por conta dessa versatilidade que hoje é o formato mais utilizado pelo mercado, conseguindo suportar o crescimento das operações.
+          </p>
 
-            <p>
-              É essa facilidade de adaptação e consequente redução de custos que gera vantagens à topologia híbrida. Por outro lado, é importante lembrar que a mescla de mais de um tipo de rede gera complexidades na estruturação.
-            </p>
-          </div>
-        </section>
+          <p>
+            É essa facilidade de adaptação e consequente redução de custos que gera vantagens à topologia híbrida. Por outro lado, é importante lembrar que a mescla de mais de um tipo de rede gera complexidades na estruturação.
+          </p>
+        </div>
+      </section>
 
-        <section id="malha" class="container">
-          <div class="image">
-            <img src="/img/malha.png" alt="Topologia em malha" />
-          </div>
+      <section id="malha" class="container">
+        <div class="image">
+          <img src="/img/malha.png" alt="Topologia em malha" />
+        </div>
 
-          <div class="content">
-            <p>
-              Na topologia de malha, todos os dispositivos se conectam entre si. Essa rede é composta por vários nós, que funcionam como uma grande rede e que aceitam a conexão dos usuários. Esses nós se comportam como repetidores e transmitem os dados um a um por todos os caminhos disponíveis.
-            </p>
+        <div class="content">
+          <h1>Malha</h1>
+          <p>
+            Na topologia de malha, todos os dispositivos se conectam entre si. Essa rede é composta por vários nós, que funcionam como uma grande rede e que aceitam a conexão dos usuários. Esses nós se comportam como repetidores e transmitem os dados um a um por todos os caminhos disponíveis.
+          </p>
 
-            <p>
-              Esse padrão de organização é vantajoso por sua confiabilidade e, por isso, muitas vezes é usado em grandes operações.
-            </p>
+          <p>
+            Esse padrão de organização é vantajoso por sua confiabilidade e, por isso, muitas vezes é usado em grandes operações.
+          </p>
 
-            <p>
-              Já quando o assunto são as desvantagens, há um grande planejamento por trás da estruturação desse tipo de rede, o que faz com que ela seja cara e complexa.
-            </p>
-          </div>
-        </section>
+          <p>
+            Já quando o assunto são as desvantagens, há um grande planejamento por trás da estruturação desse tipo de rede, o que faz com que ela seja cara e complexa.
+          </p>
+        </div>
+      </section>
 
-        <section id="ponto-a-ponto" class="container">
-          <div class="image">
-            <img src="/img/pontoaponto.png" alt="Topologia ponto a ponto" />
-          </div>
+      <section id="ponto-a-ponto" class="container">
+        <div class="image">
+          <img src="/img/pontoaponto.png" alt="Topologia ponto a ponto" />
+        </div>
 
-          <div class="content">
-            <p>
-              O formato de rede mais simples é o ponto a ponto. Nele, os nós se conectam entre si, o que faz com que a comunicação entre os dispositivos ocorra rapidamente.
-            </p>
+        <div class="content">
+          <h1>Ponto a pont4</h1>
+          <p>
+            O formato de rede mais simples é o ponto a ponto. Nele, os nós se conectam entre si, o que faz com que a comunicação entre os dispositivos ocorra rapidamente.
+          </p>
 
-            <p>
-              É por conta dessa simplicidade que essa topologia é amplamente adotada nas instalações residenciais. Já em operações mais robustas, que exigem maiores transmissões de dados e infraestrutura, ela não é sustentável.
-            </p>
-          </div>
-        </section>
+          <p>
+            É por conta dessa simplicidade que essa topologia é amplamente adotada nas instalações residenciais. Já em operações mais robustas, que exigem maiores transmissões de dados e infraestrutura, ela não é sustentável.
+          </p>
+        </div>
       </section>
     </div>
 
 
     <div id="protocolos" class="black-white flex flex-col items-center">
-      <h1 class="text-4xl">Protocolos</h1>
+      <h1 class="text-4xl pt-8">Protocolos</h1>
 
       <section id="ip" class="protocol">
         <h1>IP</h1>
@@ -189,39 +280,6 @@
           </p>
         </div>
       </section>
-
-      <section id="tcpip" class="protocol">
-        <h1>TCP/IP</h1>
-        
-        <div class="content">
-          <p>
-            Trata-se do acrônimo de dois protocolos combinados. São eles o TCP (Transmission Control Protocol — Protocolo de Controle de Transmissão) e IP (Internet Protocol — Protocolo de Internet).
-          </p>
-
-          <p>
-            Juntos, são os responsáveis pela base de envio e recebimento de dados por toda a internet. Essa pilha de protocolos é dividida em 4 camadas:
-          </p>
-
-          <ul class="list-disc">
-            <li>
-              aplicação: usada para enviar e receber dados de outros programas pela internet. Nessa camada estão os protocolos HTTP, FTP e SMTP;
-            </li> 
-
-            <li>
-              transporte: responsável por transportar os arquivos dos pacotes recebidos da camada de aplicação. Eles são organizados e transformados em outros menores, que serão enviados à rede;
-            </li>
-
-            <li>
-              rede: os arquivos empacotados na camada de transporte são recebidos e anexados ao IP da máquina que envia e recebe os dados. Em seguida, eles são enviados pela internet;
-            </li>
-
-            <li>
-              interface: é a camada que executa o recebimento ou o envio de arquivos na web.
-            </li>
-          </ul>
-        </div>
-      </section>
-
 
       <section id="http" class="protocol">
         <h1>HTTP/HTTPS</h1>
@@ -367,4 +425,20 @@
       </section>
     </div>
   </body>
+
+  <script>
+    let prevScrollPos = window.pageYOffset;
+
+    window.onscroll = function onScrollHandler() {
+      const currentScrollPos = window.pageYOffset;
+
+      if (prevScrollPos > currentScrollPos) {
+        document.querySelector('header').style.top = '0';
+      } else {
+        document.querySelector('header').style.top = '-100px';
+      }
+
+      prevScrollPos = currentScrollPos;
+    };
+  </script>
 </html>
