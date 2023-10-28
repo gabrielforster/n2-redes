@@ -727,21 +727,45 @@ img {
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  min-width: 95%;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   #topologias {
-    max-width: 56rem;
+    width: 80%;
   }
 }
 
 #topologias .container {
   margin: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 95%;
   border-radius: 0.25rem;
   border-width: 1px;
+}
+
+@media (min-width: 640px) {
+  #topologias .container {
+    min-width: 80%;
+    width: 60%;
+  }
+}
+
+@media (min-width: 768px) {
+  #topologias .container {
+    min-width: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  #topologias .container {
+    width: 40%;
+    min-width: 40%;
+  }
 }
 
 /* accordion-trigger */
@@ -762,8 +786,17 @@ img {
 #topologias .container .image img {
   margin-left: auto;
   margin-right: auto;
-  height: 20rem;
+  height: 18rem;
   padding-left: 2rem;
+}
+
+@media (min-width: 768px) {
+  #topologias .container .image img {
+    height: 20rem;
+  }
+}
+
+#topologias .container .image img {
   -o-object-fit: contain;
      object-fit: contain;
 }

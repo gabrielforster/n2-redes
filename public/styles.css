@@ -78,12 +78,15 @@ img {
 }
 
 #topologias {
-  @apply flex flex-col items-center justify-around mx-auto;
-  @apply md:w-4xl ;
+  @apply flex flex-col items-center justify-around min-w-[95%] mx-auto;
+  @apply sm:w-[80%];
 }
 
 #topologias .container {
-  @apply rounded border m-2;
+  @apply rounded border m-2 mx-auto min-w-[95%];
+  @apply sm:min-w-[80%] sm:w-[80%];
+  @apply md:min-w-[60%] sm:w-[60%];
+  @apply lg:min-w-[40%] lg:w-[40%];
 }
 
 /* accordion-trigger */
@@ -94,7 +97,7 @@ img {
 }
 
 #topologias .container .image img {
-  @apply h-80 mx-auto pl-8;
+  @apply h-72 md:h-80 mx-auto pl-8;
   @apply object-contain;
 }
 
