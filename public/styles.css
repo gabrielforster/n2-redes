@@ -79,7 +79,7 @@ img {
 
 #topologias {
   @apply flex flex-col items-center justify-around mx-auto;
-  @apply md:max-w-4xl ;
+  @apply md:w-4xl ;
 }
 
 #topologias .container {
