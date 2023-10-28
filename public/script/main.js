@@ -10,16 +10,40 @@ const pathToHTML = {
 };
 
 if (pathname in pathToHTML) {
-  fetch(pathToHTML[pathname])
-    .then(response => response.text())
-    .then(htmlContent => {
-      contentWrapper.innerHTML = htmlContent;
+  (async () => {
+    await new Promise((resolve) => {
+      fetch(pathToHTML[pathname])
+        .then(response => response.text())
+        .then(htmlContent => {
+          contentWrapper.innerHTML = htmlContent;
+          resolve();
+        })
+        .catch((_) => {
+          contentWrapper.innerHTML = `
+            <h1>404</h1>
+            `
+          resolve();
+        });
     })
-    .catch((_) => {
-      contentWrapper.innerHTML = `
-        <h1>404</h1>
-      `
-    });
+
+    if (pathname === '/topologias') {
+      const accordionTriggers = document.querySelectorAll('.accordion-trigger');
+
+      accordionTriggers.forEach(trigger => {
+        const arrow = trigger.getElementsByClassName('arrow')[0];
+        const accordion = trigger.getElementsByClassName('accordion')[0];
+        accordion.classList.add('deactive');
+        arrow.classList.add('arrow-down');
+
+        trigger.addEventListener('click', () => {
+          accordion.classList.toggle('deactive');
+          arrow.classList.toggle('arrow-down');
+          arrow.classList.toggle('arrow-up');
+        });
+      });
+    }
+  })()
+
 } else {
   contentWrapper.innerHTML = `
     <h1>404</h1>

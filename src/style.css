@@ -85,8 +85,16 @@ img {
   @apply rounded border m-2;
 }
 
+/* accordion-trigger */
+#topologias .container h1 {
+  @apply text-center font-bold text-xl py-4;
+  @apply cursor-pointer;
+  @apply flex items-center justify-center;
+}
+
 #topologias .container .image img {
-  @apply h-80;
+  @apply h-80 mx-auto pl-8;
+  @apply object-contain;
 }
 
 #topologias .container .content {
@@ -144,4 +152,21 @@ img {
 .disappear-header {
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
+}
+
+.deactive {
+  @apply hidden;
+}
+
+.arrow {
+  @apply ml-4
+}
+
+.arrow-down {
+  @apply h-0 w-0 border-x-8 border-x-transparent border-b-[16px] border-b-black;
+  @apply transform rotate-180;
+}
+
+.arrow-up {
+  @apply h-0 w-0 border-x-8 border-x-transparent border-b-[16px] border-b-black;
 }
