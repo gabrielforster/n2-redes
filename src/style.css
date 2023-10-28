@@ -78,7 +78,8 @@ img {
 }
 
 #topologias {
-  @apply flex flex-col items-center justify-around max-w-4xl mx-auto;
+  @apply flex flex-col items-center justify-around mx-auto;
+  @apply md:max-w-4xl ;
 }
 
 #topologias .container {

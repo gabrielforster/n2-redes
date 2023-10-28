@@ -727,10 +727,15 @@ img {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  max-width: 56rem;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+  #topologias {
+    max-width: 56rem;
+  }
 }
 
 #topologias .container {
