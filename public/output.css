@@ -676,7 +676,14 @@ img {
   .model .content {
     flex-direction: row;
   }
+}
 
+.model .content {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 1024px) {
   .model .text {
     width: 50%;
   }
@@ -814,6 +821,15 @@ img {
 
 .container > * {
   flex: 1 1 0%;
+}
+
+#protocolos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #protocolos .protocol {

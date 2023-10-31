@@ -54,6 +54,7 @@ img {
 .model .content {
   @apply flex flex-col items-center justify-around;
   @apply lg:flex-row;
+  @apply py-4;
 }
 
 .model .text {
@@ -112,6 +113,11 @@ img {
 
 .container > * {
   @apply flex-1;
+}
+
+#protocolos {
+  @apply flex flex-col justify-center items-center;
+  @apply mx-auto;
 }
 
 #protocolos .protocol {
