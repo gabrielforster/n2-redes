@@ -7,3 +7,5 @@ npm run dev # inicia o servidor responsavel pelas paginas web (estou mudando par
 ```bash
 node index.cjs # inicia o servidor node para login
 ```
+
+username e senha: admin
