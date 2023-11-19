@@ -1,149 +1,177 @@
-<main>
-  <div id="topologias" class="white-black flex flex-col items-center">
-    <h1 class="text-4xl py-8">Topologias</h1>
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redes de Computadores</title>
+    <script defer src="/static/script/main.js"></script>
+    <link rel="stylesheet" href="/static/styles/output.css">
+  </head>
+  <body>
+    <header class="black-white p-5 mx-auto w-full flex justify-between flex-col sm:flex-row sticky top-0 z-50">
+      <h1 class="text-3xl text-center">PEG</h1> 
 
-    <section id="anel" class="container accordion-trigger">
-      <h1>Anel <span class="arrow"></span></h1>
-
-      <div class="content accordion">
-        <p>
-        Na topologia de anel, a organização é feita em formato circular. Assim, cada máquina possui outras duas máquinas vizinhas conectadas e pelas quais os dados são transmitidos.
-        </p>
-        <p>
-        Outra característica desse tipo de topologia é que o fluxo de transmissão dos dados é unidirecional. Ou seja, ele é retransmitido de estação em estação, em uma direção única, até que chegue ao seu destino.
-        </p>
-
-        <p>Algumas das vantagens</p>
-        <ul class="list-disc">
-          <li>Baixo custo de implementação</li>
-          <li>Eficiência na transmissão de dados</li>
-          <li>Alta confiabilidade</li>
-          <li>Possibilidade de implementação em grandes redes</li>
+      <nav class="mx-auto sm:mx-0">
+        <ul class="flex mx-auto">
+          <li><a class="nav-link" href="/#tcp">TCP/IP</a></li>
+          <li><a class="nav-link" href="/#osi">OSI</a></li>
+          <li><a class="nav-link" href="/topologias">Topologias</a></li>
+          <li><a class="nav-link" href="/protocolos">Protocolos</a></li>
         </ul>
+      </nav>
+    </header>
 
-        <p>
-        Por outro lado, uma desvantagem é que, considerando a forma como os dados são transmitidos, a falha de uma das máquinas pode afetar a estabilidade da rede por inteiro.
-        </p>
-      </div>
+    <div id="main-content">
+      <main>
+        <div id="topologias" class="white-black flex flex-col items-center">
+          <h1 class="text-4xl py-8">Topologias</h1>
 
-      <div class="image">
-        <img src="/img/anel.png" alt="Topologia de anel" /> 
-      </div>
-    </section>
+          <section id="anel" class="container accordion-trigger">
+            <h1>Anel <span class="arrow"></span></h1>
 
-    <section id="arvore" class="container accordion-trigger">
-      <h1>Árvore <span class="arrow"></span></h1>
-      <div class="content accordion">
-        <p>
-        A disposição das máquinas nessa topologia lembra a dos galhos de uma árvore. Assim, ela tem um node central (como um tronco), que é responsável pela distribuição dos dados.
-        </p>
+            <div class="content accordion">
+              <p>
+              Na topologia de anel, a organização é feita em formato circular. Assim, cada máquina possui outras duas máquinas vizinhas conectadas e pelas quais os dados são transmitidos.
+              </p>
+              <p>
+              Outra característica desse tipo de topologia é que o fluxo de transmissão dos dados é unidirecional. Ou seja, ele é retransmitido de estação em estação, em uma direção única, até que chegue ao seu destino.
+              </p>
 
-        <p>
-        A vantagem da topologia de árvore sobre a de anel é que no caso de falha de um dos dispositivos da ramificação, a rede não fica comprometida. Além disso, essa organização também facilita a identificação de erros.
-        </p>
+              <p>Algumas das vantagens</p>
+              <ul class="list-disc">
+                <li>Baixo custo de implementação</li>
+                <li>Eficiência na transmissão de dados</li>
+                <li>Alta confiabilidade</li>
+                <li>Possibilidade de implementação em grandes redes</li>
+              </ul>
 
-        <p>
-        Ainda assim, embora a vulnerabilidade não seja tão alta, caso o dispositivo central seja afetado, os demais também sofrem o impacto. Outra desvantagem é a do cabeamento, já que essa estrutura demanda uma grande quantidade do material.
-        </p>
-      </div>
+              <p>
+              Por outro lado, uma desvantagem é que, considerando a forma como os dados são transmitidos, a falha de uma das máquinas pode afetar a estabilidade da rede por inteiro.
+              </p>
+            </div>
 
-      <div class="image">
-        <img src="/img/arvore.png" alt="Topologia em árvore" />
-      </div>
-    </section>
+            <div class="image">
+              <img src="/static/img/anel.png" alt="Topologia de anel" /> 
+            </div>
+          </section>
 
-    <section id="barramento" class="container accordion-trigger">
-      <h1>Barramento <span class="arrow"></span></h1>
-      <div class="content accordion">
-        <p>
-        Mesmo o nome não dê indícios de como sua estrutura é visualmente, a topologia de barramento é uma das mais simples de ser implementada. Neste formato, os dados circulam unilateralmente por meio de um único cabo.
-        </p>
+          <section id="arvore" class="container accordion-trigger">
+            <h1>Árvore <span class="arrow"></span></h1>
+            <div class="content accordion">
+              <p>
+              A disposição das máquinas nessa topologia lembra a dos galhos de uma árvore. Assim, ela tem um node central (como um tronco), que é responsável pela distribuição dos dados.
+              </p>
 
-        <p>
-        Embora tenha um layout simples e econômico, de fácil manutenção, o que é uma grande vantagem, essa estrutura é vulnerável a falhas. Afinal, assim como no caso da topologia de anel, as máquinas estão conectadas em um único fluxo.
-        </p>
-      </div>
+              <p>
+              A vantagem da topologia de árvore sobre a de anel é que no caso de falha de um dos dispositivos da ramificação, a rede não fica comprometida. Além disso, essa organização também facilita a identificação de erros.
+              </p>
 
-      <div class="image">
-        <img src="/img/barramento.png" alt="Topologia em barramento" />
-      </div>
-    </section>
+              <p>
+              Ainda assim, embora a vulnerabilidade não seja tão alta, caso o dispositivo central seja afetado, os demais também sofrem o impacto. Outra desvantagem é a do cabeamento, já que essa estrutura demanda uma grande quantidade do material.
+              </p>
+            </div>
 
-    <section id="estrela" class="container accordion-trigger">
-      <h1>Estrela <span class="arrow"></span></h1>
-      <div class="content accordion">
-        <p>
-        Na topologia de formato estrela, um único dispositivo — que é organizado centralmente —, concentra os dados e os distribui para os demais dispositivos nas estações.
-        </p>
+            <div class="image">
+              <img src="/static/img/arvore.png" alt="Topologia em árvore" />
+            </div>
+          </section>
 
-        <p>
-        Essa é uma das topologias mais usadas e sua vantagem é a facilidade de gerenciamento. Isso porque, caso um dos dispositivos apresente problemas, ele fica fora da rede sem comprometer os demais.
-        </p>
+          <section id="barramento" class="container accordion-trigger">
+            <h1>Barramento <span class="arrow"></span></h1>
+            <div class="content accordion">
+              <p>
+              Mesmo o nome não dê indícios de como sua estrutura é visualmente, a topologia de barramento é uma das mais simples de ser implementada. Neste formato, os dados circulam unilateralmente por meio de um único cabo.
+              </p>
 
-        <p>
-        Ainda assim, assim como na topologia de árvore, o comprometimento do dispositivo central faz com que a rede seja impactada por completo.
-        </p>
-      </div>
+              <p>
+              Embora tenha um layout simples e econômico, de fácil manutenção, o que é uma grande vantagem, essa estrutura é vulnerável a falhas. Afinal, assim como no caso da topologia de anel, as máquinas estão conectadas em um único fluxo.
+              </p>
+            </div>
 
-      <div class="image">
-        <img src="/img/estrela.png" alt="Topologia em estrela" />
-      </div>
-    </section>
+            <div class="image">
+              <img src="/static/img/barramento.png" alt="Topologia em barramento" />
+            </div>
+          </section>
 
-    <section id="hibrida" class="container accordion-trigger">
-      <h1>Híbrida <span class="arrow"></span></h1>
-      <div class="content accordion">
-        <p>
-        O nome já indica: a topologia de rede híbrida combina mais de um tipo de topologia em sua organização. É por conta dessa versatilidade que hoje é o formato mais utilizado pelo mercado, conseguindo suportar o crescimento das operações.
-        </p>
+          <section id="estrela" class="container accordion-trigger">
+            <h1>Estrela <span class="arrow"></span></h1>
+            <div class="content accordion">
+              <p>
+              Na topologia de formato estrela, um único dispositivo — que é organizado centralmente —, concentra os dados e os distribui para os demais dispositivos nas estações.
+              </p>
 
-        <p>
-        É essa facilidade de adaptação e consequente redução de custos que gera vantagens à topologia híbrida. Por outro lado, é importante lembrar que a mescla de mais de um tipo de rede gera complexidades na estruturação.
-        </p>
-      </div>
+              <p>
+              Essa é uma das topologias mais usadas e sua vantagem é a facilidade de gerenciamento. Isso porque, caso um dos dispositivos apresente problemas, ele fica fora da rede sem comprometer os demais.
+              </p>
 
-      <div class="image">
-        <img src="/img/hibrida.png" alt="Topologia híbrida" />
-      </div>
-    </section>
+              <p>
+              Ainda assim, assim como na topologia de árvore, o comprometimento do dispositivo central faz com que a rede seja impactada por completo.
+              </p>
+            </div>
 
-    <section id="malha" class="container accordion-trigger">
-      <h1>Malha <span class="arrow"></span></h1>
-      <div class="content accordion">
-        <p>
-        Na topologia de malha, todos os dispositivos se conectam entre si. Essa rede é composta por vários nós, que funcionam como uma grande rede e que aceitam a conexão dos usuários. Esses nós se comportam como repetidores e transmitem os dados um a um por todos os caminhos disponíveis.
-        </p>
+            <div class="image">
+              <img src="/static/img/estrela.png" alt="Topologia em estrela" />
+            </div>
+          </section>
 
-        <p>
-        Esse padrão de organização é vantajoso por sua confiabilidade e, por isso, muitas vezes é usado em grandes operações.
-        </p>
+          <section id="hibrida" class="container accordion-trigger">
+            <h1>Híbrida <span class="arrow"></span></h1>
+            <div class="content accordion">
+              <p>
+              O nome já indica: a topologia de rede híbrida combina mais de um tipo de topologia em sua organização. É por conta dessa versatilidade que hoje é o formato mais utilizado pelo mercado, conseguindo suportar o crescimento das operações.
+              </p>
 
-        <p>
-        Já quando o assunto são as desvantagens, há um grande planejamento por trás da estruturação desse tipo de rede, o que faz com que ela seja cara e complexa.
-        </p>
-      </div>
+              <p>
+              É essa facilidade de adaptação e consequente redução de custos que gera vantagens à topologia híbrida. Por outro lado, é importante lembrar que a mescla de mais de um tipo de rede gera complexidades na estruturação.
+              </p>
+            </div>
 
-      <div class="image">
-        <img src="/img/malha.png" alt="Topologia em malha" />
-      </div>
-    </section>
+            <div class="image">
+              <img src="/static/img/hibrida.png" alt="Topologia híbrida" />
+            </div>
+          </section>
 
-    <section id="ponto-a-ponto" class="container accordion-trigger">
-      <h1>Ponto a ponto <span class="arrow"></span></h1>
-      <div class="content accordion">
-        <p>
-        O formato de rede mais simples é o ponto a ponto. Nele, os nós se conectam entre si, o que faz com que a comunicação entre os dispositivos ocorra rapidamente.
-        </p>
+          <section id="malha" class="container accordion-trigger">
+            <h1>Malha <span class="arrow"></span></h1>
+            <div class="content accordion">
+              <p>
+              Na topologia de malha, todos os dispositivos se conectam entre si. Essa rede é composta por vários nós, que funcionam como uma grande rede e que aceitam a conexão dos usuários. Esses nós se comportam como repetidores e transmitem os dados um a um por todos os caminhos disponíveis.
+              </p>
 
-        <p>
-        É por conta dessa simplicidade que essa topologia é amplamente adotada nas instalações residenciais. Já em operações mais robustas, que exigem maiores transmissões de dados e infraestrutura, ela não é sustentável.
-        </p>
-      </div>
+              <p>
+              Esse padrão de organização é vantajoso por sua confiabilidade e, por isso, muitas vezes é usado em grandes operações.
+              </p>
 
-      <div class="image">
-        <img src="/img/pontoaponto.png" alt="Topologia ponto a ponto" />
-      </div>
-    </section>
-  </div>
+              <p>
+              Já quando o assunto são as desvantagens, há um grande planejamento por trás da estruturação desse tipo de rede, o que faz com que ela seja cara e complexa.
+              </p>
+            </div>
 
-</main>
+            <div class="image">
+              <img src="/static/img/malha.png" alt="Topologia em malha" />
+            </div>
+          </section>
+
+          <section id="ponto-a-ponto" class="container accordion-trigger">
+            <h1>Ponto a ponto <span class="arrow"></span></h1>
+            <div class="content accordion">
+              <p>
+              O formato de rede mais simples é o ponto a ponto. Nele, os nós se conectam entre si, o que faz com que a comunicação entre os dispositivos ocorra rapidamente.
+              </p>
+
+              <p>
+              É por conta dessa simplicidade que essa topologia é amplamente adotada nas instalações residenciais. Já em operações mais robustas, que exigem maiores transmissões de dados e infraestrutura, ela não é sustentável.
+              </p>
+            </div>
+
+            <div class="image">
+              <img src="/static/img/pontoaponto.png" alt="Topologia ponto a ponto" />
+            </div>
+          </section>
+        </div>
+
+      </main>
+    </div>
+  </body>
+</html>
